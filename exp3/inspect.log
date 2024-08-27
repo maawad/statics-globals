@@ -1,0 +1,33 @@
+Inspecting first.o:
+0000000000001208 b __ZN12_GLOBAL__N_17counterE
+Inspecting second.o:
+0000000000001208 b __ZN12_GLOBAL__N_17counterE
+Inspecting main.o:
+Disassembling first.o:
+0000000000000000 <ltmp0>:
+       0: d10083ff     	sub	sp, sp, #32
+       4: a9017bfd     	stp	x29, x30, [sp, #16]
+       8: 910043fd     	add	x29, sp, #16
+       c: 90000009     	adrp	x9, 0x0 <ltmp0+0xc>
+      10: f90007e9     	str	x9, [sp, #8]
+      14: b9400128     	ldr	w8, [x9]
+      18: 11000508     	add	w8, w8, #1
+      1c: b9000128     	str	w8, [x9]
+      20: 90000000     	adrp	x0, 0x0 <ltmp0+0x20>
+      24: f9400000     	ldr	x0, [x0]
+Disassembling second.o:
+0000000000000000 <ltmp0>:
+       0: d10083ff     	sub	sp, sp, #32
+       4: a9017bfd     	stp	x29, x30, [sp, #16]
+       8: 910043fd     	add	x29, sp, #16
+       c: 90000009     	adrp	x9, 0x0 <ltmp0+0xc>
+      10: f90007e9     	str	x9, [sp, #8]
+      14: b9400128     	ldr	w8, [x9]
+      18: 11000508     	add	w8, w8, #1
+      1c: b9000128     	str	w8, [x9]
+      20: 90000000     	adrp	x0, 0x0 <ltmp0+0x20>
+      24: f9400000     	ldr	x0, [x0]
+Disassembling main.o:
+Running the program:
+First.cpp: Counter = 1
+Second.cpp: Counter = 1

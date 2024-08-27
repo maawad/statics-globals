@@ -1,0 +1,57 @@
+Inspecting first.o:
+00000000000012a8 b __ZN12_GLOBAL__N_17counterE
+Inspecting second.o:
+00000000000012a8 b __ZN12_GLOBAL__N_17counterE
+Inspecting main.o:
+Disassembling first.o:
+0000000000000000 <ltmp0>:
+       0: d10083ff     	sub	sp, sp, #32
+       4: a9017bfd     	stp	x29, x30, [sp, #16]
+       8: 910043fd     	add	x29, sp, #16
+       c: 90000000     	adrp	x0, 0x0 <ltmp0+0xc>
+      10: f9400000     	ldr	x0, [x0]
+      14: 90000001     	adrp	x1, 0x0 <ltmp0+0x14>
+      18: 91000021     	add	x1, x1, #0
+      1c: 94000000     	bl	0x1c <ltmp0+0x1c>
+      20: f90007e0     	str	x0, [sp, #8]
+      24: 94000000     	bl	0x24 <ltmp0+0x24>
+--
+0000000000000094 <__ZL16incrementCounterv>:
+      94: 90000008     	adrp	x8, 0x0 <__ZL16incrementCounterv>
+      98: b9400109     	ldr	w9, [x8]
+      9c: 11000520     	add	w0, w9, #1
+      a0: b9000100     	str	w0, [x8]
+      a4: d65f03c0     	ret
+
+00000000000000a8 <__ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB8ue170006EPFRS3_S4_E>:
+      a8: d10083ff     	sub	sp, sp, #32
+      ac: a9017bfd     	stp	x29, x30, [sp, #16]
+      b0: 910043fd     	add	x29, sp, #16
+Disassembling second.o:
+0000000000000000 <ltmp0>:
+       0: d10083ff     	sub	sp, sp, #32
+       4: a9017bfd     	stp	x29, x30, [sp, #16]
+       8: 910043fd     	add	x29, sp, #16
+       c: 90000000     	adrp	x0, 0x0 <ltmp0+0xc>
+      10: f9400000     	ldr	x0, [x0]
+      14: 90000001     	adrp	x1, 0x0 <ltmp0+0x14>
+      18: 91000021     	add	x1, x1, #0
+      1c: 94000000     	bl	0x1c <ltmp0+0x1c>
+      20: f90007e0     	str	x0, [sp, #8]
+      24: 94000000     	bl	0x24 <ltmp0+0x24>
+--
+0000000000000094 <__ZL16incrementCounterv>:
+      94: 90000008     	adrp	x8, 0x0 <__ZL16incrementCounterv>
+      98: b9400109     	ldr	w9, [x8]
+      9c: 11000520     	add	w0, w9, #1
+      a0: b9000100     	str	w0, [x8]
+      a4: d65f03c0     	ret
+
+00000000000000a8 <__ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB8ue170006EPFRS3_S4_E>:
+      a8: d10083ff     	sub	sp, sp, #32
+      ac: a9017bfd     	stp	x29, x30, [sp, #16]
+      b0: 910043fd     	add	x29, sp, #16
+Disassembling main.o:
+Running the program:
+First.cpp: Counter = 1
+Second.cpp: Counter = 1
